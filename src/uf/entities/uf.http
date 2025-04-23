@@ -1,0 +1,25 @@
+### Criar UF
+GET http://localhost:3000/uf
+
+### criar UF
+POST http://localhost:3000/uf
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name":"distrito-federal",
+    "sigla":"DF"
+}
+
+### atualizar UF
+PATCH http://localhost:3000/uf/1
+Content-Type: application/json
+
+{
+    "name":"fgdfg",
+    "sigla":"sd"
+}
+
+### deletar UF
+DELETE http://localhost:3000/uf/1
+

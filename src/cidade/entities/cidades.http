@@ -1,0 +1,27 @@
+GET http://localhost:3000/cidade
+
+###
+
+POST http://localhost:3000/cidade
+Content-Type: application/json
+
+{
+    "name": "São Paulo",
+    "estado": "SP",
+    "ufId": 1
+}
+
+###
+
+PATCH http://localhost:3000/cidade/15
+Content-Type: application/json
+
+{
+    "name": "Rio de Janeiro",
+    "estado":"RJ",
+    "ufId": 1
+}
+
+###
+
+DELETE http://localhost:3000/cidade/
