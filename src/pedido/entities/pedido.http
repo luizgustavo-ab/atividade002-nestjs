@@ -1,0 +1,34 @@
+### Criar um novo pedido
+POST http://localhost:3000/pedido
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "restauranteId": 1,
+  "produtoId": 1,
+  "quantidade": 1,  
+  "valorTotal": 89.90,
+  "dataPedido": "2025-04-24"
+}
+
+### Buscar todos os pedidos
+GET http://localhost:3000/pedido
+
+### Buscar um pedido por ID
+GET http://localhost:3000/pedido/1
+
+### Atualizar um pedido
+PATCH http://localhost:3000/pedido/1
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "restauranteId": 1,
+  "produtoId": 1,
+  "quantidade": 1,  
+  "valorTotal": 89.90,
+  "dataPedido": "2025-04-24"
+}
+
+### Deletar um pedido
+DELETE http://localhost:3000/pedido/1

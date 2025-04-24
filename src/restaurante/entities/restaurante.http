@@ -1,0 +1,30 @@
+### Criar Restaurante
+POST http://localhost:3000/restaurante
+Content-Type: application/json
+
+{
+  "nome": "Restaurante Italiano",
+  "endereco": "Rua das Flores, 123",
+  "telefone": "123456789",
+  "tipo": "Italiano"
+}
+
+### Buscar todos os Restaurantes
+GET http://localhost:3000/restaurante
+
+### Buscar Restaurante por ID
+GET http://localhost:3000/restaurante/1
+
+### Atualizar Restaurante
+PATCH http://localhost:3000/restaurante/1
+Content-Type: application/json
+
+{
+  "nome": "Restaurante Brasileiro",
+  "endereco": "Rua do Sol, 456",
+  "telefone": "987654321",
+  "tipo": "Brasileiro"
+}
+
+### Deletar Restaurante
+DELETE http://localhost:3000/restaurante/1

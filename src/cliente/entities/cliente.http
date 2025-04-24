@@ -1,0 +1,34 @@
+### Criar Cliente
+POST http://localhost:3000/cliente
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "Tiago",
+    "email": "tiago@exemplo.com",
+    "senha": "123123",
+    "cpf": "12312312312",
+    "telefone": "11987654321",
+    "endereco": "Rua Exemplo, 123, Cidade, Estado"
+}
+
+### Buscar todos os Clientes
+GET http://localhost:3000/cliente
+
+### Buscar Cliente por ID
+GET http://localhost:3000/cliente/1
+
+### Atualizar Cliente
+PATCH http://localhost:3000/cliente/1
+Content-Type: application/json
+
+{
+    "name": "Nicolas",
+    "email": "nicolas@exemplo.com",
+    "cpf": 98765432100,
+    "telefone": "11976543210",
+    "endereco": "Rua Nova, 456, Cidade, Estado"
+}
+
+### Deletar Cliente
+DELETE http://localhost:3000/cliente/1

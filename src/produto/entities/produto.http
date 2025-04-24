@@ -1,0 +1,30 @@
+### Criar produto
+POST http://localhost:3000/produto
+Content-Type: application/json
+
+{
+    "name": "Produto A",
+    "price": 100,
+    "description":"asdasda",
+    "imageUrl":"asdasdasdasd",
+    "categoryId": 1
+
+}
+
+### Listar todos os produtos
+GET http://localhost:3000/produto
+
+### Encontrar um produto por ID
+GET http://localhost:3000/produto/1
+
+### Atualizar produto
+PATCH http://localhost:3000/produto/1
+Content-Type: application/json
+
+{
+    "name": "Produto A Atualizado",
+    "price": 150
+}
+
+### Deletar produto
+DELETE http://localhost:3000/produto/1

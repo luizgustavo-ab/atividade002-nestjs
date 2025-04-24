@@ -1,0 +1,28 @@
+### Criar pagamento
+POST http://localhost:3000/pagamento
+Content-Type: application/json
+
+{
+    "valor": 150.00,
+    "metodoPagamento": "cartao",
+    "dataPagamento": "2025-04-24"
+}
+
+### Buscar todos os pagamentos
+GET http://localhost:3000/pagamento
+
+### Buscar pagamento por ID
+GET http://localhost:3000/pagamento/1
+
+### Atualizar pagamento
+PATCH http://localhost:3000/pagamento/1
+Content-Type: application/json
+
+{
+    "valor": 150.00,
+    "metodoPagamento": "cartao",
+    "dataPagamento": "2025-04-24T16:45:00.000Z"
+}
+
+### Deletar pagamento
+DELETE http://localhost:3000/pagamento/1

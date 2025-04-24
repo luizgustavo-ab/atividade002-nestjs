@@ -1,0 +1,34 @@
+### Criar Endereco
+POST http://localhost:3000/endereco
+Content-Type: application/json
+
+{
+  "rua": "Rua das Flores",
+  "numero": "123",
+  "bairro": "Jardim Primavera",
+  "cidade": "São Paulo",
+  "estado": "SP",
+  "cep": "01234-567"
+}
+
+### Obter todos os Enderecos
+GET http://localhost:3000/endereco
+
+### Obter Endereco por ID
+GET http://localhost:3000/endereco/1
+
+### Atualizar Endereco
+PATCH http://localhost:3000/endereco/1
+Content-Type: application/json
+
+{
+  "rua": "Rua das Palmeiras",
+  "numero": "456",
+  "bairro": "Centro",
+  "cidade": "São Paulo",
+  "estado": "SP",
+  "cep": "02345-678"
+}
+
+### Deletar Endereco
+DELETE http://localhost:3000/endereco/1

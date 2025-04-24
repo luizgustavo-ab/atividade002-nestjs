@@ -1,0 +1,29 @@
+### Criar entregador
+GET http://localhost:3000/entregador
+
+### criar entregador
+POST http://localhost:3000/entregador
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "tiago",
+    "cpf": 12312312312,
+    "cnh": 123456,
+    "documento_veiculo": "12345678901"
+}
+
+### atualizar entregador
+PATCH http://localhost:3000/entregador/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name":"nicolas",
+    "cpf":12312312312,
+    "cnh":123456,
+    "documento_veiculo": "12345678901"
+}
+
+### deletar entregador
+DELETE http://localhost:3000/entregador/1

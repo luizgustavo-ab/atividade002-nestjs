@@ -1,0 +1,27 @@
+### Obter avaliações
+GET http://localhost:3000/avaliacao
+
+### Criar avaliação
+POST http://localhost:3000/avaliacao
+Content-Type: application/json
+
+{
+    "restauranteId": 1,
+    "clienteId": 123,
+    "nota": 5,
+    "comentario": "fsdfsdfs"
+}
+
+### Atualizar avaliação
+PATCH http://localhost:3000/avaliacao/1
+Content-Type: application/json
+
+{
+    "restauranteId": 1,
+    "clienteId": 123,
+    "nota": 4,
+    "comentario": "hkhjkjhkhj"
+}
+
+### Deletar avaliação
+DELETE http://localhost:3000/avaliacao/1
