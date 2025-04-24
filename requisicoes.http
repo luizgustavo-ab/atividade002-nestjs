@@ -1,0 +1,316 @@
+### Criar UF
+GET http://localhost:3000/uf
+
+### criar UF
+POST http://localhost:3000/uf
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name":"distrito-federal",
+    "sigla":"DF"
+}
+
+### atualizar UF
+PATCH http://localhost:3000/uf/1
+Content-Type: application/json
+
+{
+    "name":"fgdfg",
+    "sigla":"sd"
+}
+
+### deletar UF
+DELETE http://localhost:3000/uf/1
+
+
+### Criar Restaurante
+POST http://localhost:3000/restaurante
+Content-Type: application/json
+
+{
+  "nome": "Restaurante Italiano",
+  "endereco": "Rua das Flores, 123",
+  "telefone": "123456789",
+  "tipo": "Italiano"
+}
+
+### Buscar todos os Restaurantes
+GET http://localhost:3000/restaurante
+
+### Buscar Restaurante por ID
+GET http://localhost:3000/restaurante/1
+
+### Atualizar Restaurante
+PATCH http://localhost:3000/restaurante/1
+Content-Type: application/json
+
+{
+  "nome": "Restaurante Brasileiro",
+  "endereco": "Rua do Sol, 456",
+  "telefone": "987654321",
+  "tipo": "Brasileiro"
+}
+
+### Deletar Restaurante
+DELETE http://localhost:3000/restaurante/1
+
+
+### Criar produto
+POST http://localhost:3000/produto
+Content-Type: application/json
+
+{
+    "name": "Produto A",
+    "price": 100,
+    "description":"asdasda",
+    "imageUrl":"asdasdasdasd",
+    "categoryId": 1
+
+}
+
+### Listar todos os produtos
+GET http://localhost:3000/produto
+
+### Encontrar um produto por ID
+GET http://localhost:3000/produto/1
+
+### Atualizar produto
+PATCH http://localhost:3000/produto/1
+Content-Type: application/json
+
+{
+    "name": "Produto A Atualizado",
+    "price": 150
+}
+
+### Deletar produto
+DELETE http://localhost:3000/produto/1
+
+
+### Criar um novo pedido
+POST http://localhost:3000/pedido
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "restauranteId": 1,
+  "produtoId": 1,
+  "quantidade": 1,  
+  "valorTotal": 89.90,
+  "dataPedido": "2025-04-24"
+}
+
+### Buscar todos os pedidos
+GET http://localhost:3000/pedido
+
+### Buscar um pedido por ID
+GET http://localhost:3000/pedido/1
+
+### Atualizar um pedido
+PATCH http://localhost:3000/pedido/1
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "restauranteId": 1,
+  "produtoId": 1,
+  "quantidade": 1,  
+  "valorTotal": 89.90,
+  "dataPedido": "2025-04-24"
+}
+
+### Deletar um pedido
+DELETE http://localhost:3000/pedido/1
+
+
+### Criar pagamento
+POST http://localhost:3000/pagamento
+Content-Type: application/json
+
+{
+    "valor": 150.00,
+    "metodoPagamento": "cartao",
+    "dataPagamento": "2025-04-24"
+}
+
+### Buscar todos os pagamentos
+GET http://localhost:3000/pagamento
+
+### Buscar pagamento por ID
+GET http://localhost:3000/pagamento/1
+
+### Atualizar pagamento
+PATCH http://localhost:3000/pagamento/1
+Content-Type: application/json
+
+{
+    "valor": 150.00,
+    "metodoPagamento": "cartao",
+    "dataPagamento": "2025-04-24T16:45:00.000Z"
+}
+
+### Deletar pagamento
+DELETE http://localhost:3000/pagamento/1
+
+
+### Criar entregador
+GET http://localhost:3000/entregador
+
+### criar entregador
+POST http://localhost:3000/entregador
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "tiago",
+    "cpf": 12312312312,
+    "cnh": 123456,
+    "documento_veiculo": "12345678901"
+}
+
+### atualizar entregador
+PATCH http://localhost:3000/entregador/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name":"nicolas",
+    "cpf":12312312312,
+    "cnh":123456,
+    "documento_veiculo": "12345678901"
+}
+
+### deletar entregador
+DELETE http://localhost:3000/entregador/1
+
+
+### Criar Endereco
+POST http://localhost:3000/endereco
+Content-Type: application/json
+
+{
+  "rua": "Rua das Flores",
+  "numero": "123",
+  "bairro": "Jardim Primavera",
+  "cidade": "São Paulo",
+  "estado": "SP",
+  "cep": "01234-567"
+}
+
+### Obter todos os Enderecos
+GET http://localhost:3000/endereco
+
+### Obter Endereco por ID
+GET http://localhost:3000/endereco/1
+
+### Atualizar Endereco
+PATCH http://localhost:3000/endereco/1
+Content-Type: application/json
+
+{
+  "rua": "Rua das Palmeiras",
+  "numero": "456",
+  "bairro": "Centro",
+  "cidade": "São Paulo",
+  "estado": "SP",
+  "cep": "02345-678"
+}
+
+### Deletar Endereco
+DELETE http://localhost:3000/endereco/1
+
+### Criar Cliente
+POST http://localhost:3000/cliente
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "Tiago",
+    "email": "tiago@exemplo.com",
+    "senha": "123123",
+    "cpf": "12312312312",
+    "telefone": "11987654321",
+    "endereco": "Rua Exemplo, 123, Cidade, Estado"
+}
+
+### Buscar todos os Clientes
+GET http://localhost:3000/cliente
+
+### Buscar Cliente por ID
+GET http://localhost:3000/cliente/1
+
+### Atualizar Cliente
+PATCH http://localhost:3000/cliente/1
+Content-Type: application/json
+
+{
+    "name": "Nicolas",
+    "email": "nicolas@exemplo.com",
+    "cpf": 98765432100,
+    "telefone": "11976543210",
+    "endereco": "Rua Nova, 456, Cidade, Estado"
+}
+
+### Deletar Cliente
+DELETE http://localhost:3000/cliente/1
+
+
+### Obter avaliações
+GET http://localhost:3000/avaliacao
+
+### Criar avaliação
+POST http://localhost:3000/avaliacao
+Content-Type: application/json
+
+{
+    "restauranteId": 1,
+    "clienteId": 123,
+    "nota": 5,
+    "comentario": "fsdfsdfs"
+}
+
+### Atualizar avaliação
+PATCH http://localhost:3000/avaliacao/1
+Content-Type: application/json
+
+{
+    "restauranteId": 1,
+    "clienteId": 123,
+    "nota": 4,
+    "comentario": "hkhjkjhkhj"
+}
+
+### Deletar avaliação
+DELETE http://localhost:3000/avaliacao/1
+
+
+### buscar todas as cidades
+
+GET http://localhost:3000/cidade
+
+### criar uma cidade
+
+POST http://localhost:3000/cidade
+Content-Type: application/json
+
+{
+    "name": "São Paulo",
+    "estado": "SP",
+    "ufId": 1
+}
+
+### atualizar uma cidade
+
+PATCH http://localhost:3000/cidade/15
+Content-Type: application/json
+
+{
+    "name": "Rio de Janeiro",
+    "estado":"RJ",
+    "ufId": 1
+}
+
+### deletar uma cidade
+
+DELETE http://localhost:3000/cidade/
